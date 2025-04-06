@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitable Planets Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Habitable Planets Explorer</h1>
+        <p class="tagline">Exploring our cosmic neighborhood for potentially habitable worlds</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#habitable-planets">Habitable Planets</a></li>
+            <li><a href="#interstellar-travel">Interstellar Travel</a></li>
+            <li><a href="#journey-calculator">Journey Calculator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Our Quest for New Worlds</h2>
+            <p>As humanity looks to the stars, we face two fundamental questions:</p>
+            <ol>
+                <li>Which planets beyond our solar system could potentially support human life?</li>
+                <li>How might we reach these distant worlds within a single human lifetime?</li>
+            </ol>
+            <p>This explorer provides the latest scientific understanding on both questions, combining exoplanet research with theoretical physics on faster-than-light travel possibilities.</p>
+        </section>
+
+        <section id="habitable-planets">
+            <h2>Potentially Habitable Exoplanets</h2>
+            <p>Scientists use several key criteria to evaluate an exoplanet's potential habitability:</p>
+            
+            <div class="criteria-container">
+                <div class="criteria-card">
+                    <h3>Habitable Zone</h3>
+                    <p>The planet must orbit within the "Goldilocks zone" where it's neither too hot nor too cold for liquid water to exist on the surface.</p>
+                </div>
+                
+                <div class="criteria-card">
+                    <h3>Size and Mass</h3>
+                    <p>The planet should be roughly Earth-sized (0.5-1.5 Earth radii) to maintain a suitable atmosphere and gravity.</p>
+                </div>
+                
+                <div class="criteria-card">
+                    <h3>Atmosphere</h3>
+                    <p>A stable atmosphere with the right composition is crucial for temperature regulation and protection from radiation.</p>
+                </div>
+                
+                <div class="criteria-card">
+                    <h3>Star Type</h3>
+                    <p>The host star should be stable, not too active with flares, and have a long enough lifespan.</p>
+                </div>
+            </div>
+            
+            <h3>Top Candidates for Habitability</h3>
+            <div class="planets-grid" id="planets-container">
+                <!-- Planet cards will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="interstellar-travel">
+            <h2>Interstellar Travel Technologies</h2>
+            <p>For humans to reach these distant worlds within a single lifetime, we need to overcome the limitations of conventional propulsion. Here are the most promising theoretical approaches:</p>
+            
+            <div class="travel-methods">
+                <div class="travel-card">
+                    <h3>Alcubierre Warp Drive</h3>
+                    <p>Theoretically allows faster-than-light travel by warping spacetime around a ship, creating a bubble that contracts space in front and expands it behind.</p>
+                    <p><strong>Challenges:</strong> Requires negative energy/exotic matter, enormous energy requirements.</p>
+                    <p><strong>Travel time to Proxima Centauri:</strong> Potentially weeks or months if implemented.</p>
+                </div>
+                
+                <div class="travel-card">
+                    <h3>Wormholes</h3>
+                    <p>Theoretical tunnels through spacetime that could connect distant points, allowing for near-instantaneous travel.</p>
+                    <p><strong>Challenges:</strong> Requires exotic matter to keep stable, may not exist naturally, and creating artificial ones is beyond current physics.</p>
+                    <p><strong>Travel time:</strong> Potentially instantaneous if stabilized.</p>
+                </div>
+                
+                <div class="travel-card">
+                    <h3>Quantum Entanglement Transport</h3>
+                    <p>A highly speculative method using quantum mechanical properties to transfer information or potentially matter instantaneously.</p>
+                    <p><strong>Challenges:</strong> Currently only theoretical, contradicts classical physics, no experimental evidence for macroscopic objects.</p>
+                    <p><strong>Travel time:</strong> Potentially instantaneous if feasible.</p>
+                </div>
+                
+                <div class="travel-card">
+                    <h3>Near-Light-Speed Travel</h3>
+                    <p>Using advanced propulsion (nuclear pulse, fusion, antimatter) to achieve significant fractions of light speed.</p>
+                    <p><strong>Challenges:</strong> Enormous energy requirements, relativistic effects, interstellar medium collisions.</p>
+                    <p><strong>Travel time to Proxima Centauri:</strong> 4-20 years depending on speed achieved (0.2c-0.9c).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey-calculator">
+            <h2>Interstellar Journey Calculator</h2>
+            <p>Explore how different propulsion technologies affect travel times to potentially habitable exoplanets.</p>
+            
+            <div class="calculator">
+                <div class="input-group">
+                    <label for="planet-select">Select Destination:</label>
+                    <select id="planet-select">
+                        <!-- Options will be filled by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="technology-select">Select Travel Technology:</label>
+                    <select id="technology-select">
+                        <option value="chemical">Chemical Rockets (Current)</option>
+                        <option value="nuclear">Nuclear Propulsion</option>
+                        <option value="fusion">Fusion Drives</option>
+                        <option value="antimatter">Antimatter Engines</option>
+                        <option value="lightsail">Laser Light Sail</option>
+                        <option value="warp">Theoretical Warp Drive</option>
+                        <option value="wormhole">Theoretical Wormhole</option>
+                    </select>
+                </div>
+                
+                <button id="calculate-btn">Calculate Journey</button>
+                
+                <div id="result-container" class="hidden">
+                    <h3>Journey Results:</h3>
+                    <p id="distance-result"></p>
+                    <p id="travel-time"></p>
+                    <p id="human-lifespan"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Habitable Planets Explorer</p>
+        <p>Data sources: NASA Exoplanet Archive, SETI Institute, Breakthrough Starshot Initiative</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

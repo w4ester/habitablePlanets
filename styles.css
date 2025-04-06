@@ -1,0 +1,341 @@
+/* Global Styles */
+:root {
+    --primary-color: #1a237e; /* Deep space blue */
+    --secondary-color: #7986cb; /* Lighter blue */
+    --accent-color: #4fc3f7; /* Light blue for highlights */
+    --text-color: #f5f5f5; /* Off-white for text */
+    --background-color: #121212; /* Very dark for space */
+    --card-bg-color: rgba(30, 30, 50, 0.7); /* Semi-transparent dark blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background-color);
+    background-image: url('images/stars-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* If background image fails to load */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #000000, #0f2027, #203a43);
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(79, 195, 247, 0.5); /* Glow effect */
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+nav {
+    background-color: rgba(26, 35, 126, 0.8);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px rgba(79, 195, 247, 0.7);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: rgba(18, 18, 18, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Criteria Cards */
+.criteria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.criteria-card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.criteria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.criteria-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Planets Grid */
+.planets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.planet-card {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.planet-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.planet-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, var(--card-bg-color), transparent);
+}
+
+.planet-info {
+    padding: 1.5rem;
+}
+
+.planet-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.planet-info .distance {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.planet-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.planet-stats .stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.planet-stats .stat-name {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.planet-stats .stat-value {
+    font-weight: bold;
+}
+
+/* Travel Methods */
+.travel-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.travel-card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.travel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.travel-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(79, 195, 247, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+/* Journey Calculator */
+.calculator {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+select, button {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+#result-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+#result-container h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+#result-container p {
+    margin-bottom: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 3rem;
+    border-top: 2px solid var(--accent-color);
+}
+
+footer p {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+    
+    .criteria-container,
+    .planets-grid,
+    .travel-methods {
+        grid-template-columns: 1fr;
+    }
+}
