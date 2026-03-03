@@ -40,7 +40,7 @@ For educational purposes, you can find similar images from these sources:
 
 ## Scientific Basis
 
-The information presented is based on current scientific understanding as of early 2025, including:
+The information presented is based on current scientific understanding, including:
 
 - **Exoplanet Data**: Based on NASA's Exoplanet Archive, ESA's CHEOPS mission, and other sources.
 - **Propulsion Technologies**: Based on theoretical physics papers and NASA's Breakthrough Propulsion Physics program.
